@@ -24,7 +24,7 @@ use Zend\Expressive\MiddlewareFactory;
  * $app->route('/contact', App\Handler\ContactHandler::class)->setName('contact');
  *
  * or:
- *
+ *'
  * $app->route(
  *     '/contact',
  *     App\Handler\ContactHandler::class,
@@ -34,5 +34,6 @@ use Zend\Expressive\MiddlewareFactory;
  */
 return function (Application $app, MiddlewareFactory $factory, ContainerInterface $container) : void {
     $app->get('/', App\Handler\HomePageHandler::class, 'home');
+    $app->get('/teste', App\Handler\TestePageHandler::class, 'teste');
     $app->get('/api/ping', App\Handler\PingHandler::class, 'api.ping');
 };
